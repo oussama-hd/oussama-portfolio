@@ -30,7 +30,7 @@ export default function RecentProjects() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "fill" }}
                   />
                 </div>
                 <div className={styles.overlayAction}>

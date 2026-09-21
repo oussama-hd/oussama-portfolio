@@ -10,13 +10,7 @@ import BookingModal from "@/components/Modals/BookingModal";
 import { ArrowLeft, Search, Sparkles, ExternalLink } from "lucide-react";
 import styles from "./projects.module.scss";
 
-const CATEGORIES = [
-  "All",
-  "Insurance SaaS",
-  "E-Commerce",
-  "Full Stack",
-  "Frontend",
-];
+
 
 export default function AllProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -81,20 +75,6 @@ export default function AllProjectsPage() {
               />
             </div>
 
-            <div className={styles.categoryPills}>
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat}
-                  type="button"
-                  className={`${styles.categoryBtn} ${
-                    selectedCategory === cat ? styles.active : ""
-                  }`}
-                  onClick={() => setSelectedCategory(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Results count info */}
@@ -119,7 +99,7 @@ export default function AllProjectsPage() {
                         alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "fill" }}
                       />
                     </div>
                     <div className={styles.overlayAction}>
