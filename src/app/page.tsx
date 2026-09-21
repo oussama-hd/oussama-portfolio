@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
-import TrustedBy from "@/components/TrustedBy/TrustedBy";
 import RecentProjects from "@/components/RecentProjects/RecentProjects";
 import SkillsGrid from "@/components/SkillsGrid/SkillsGrid";
 import Services from "@/components/Services/Services";
@@ -33,9 +32,6 @@ export default function Home() {
 
       {/* 2. Hero Section */}
       <Hero onOpenBooking={handleOpenBooking} />
-
-      {/* 3. Trusted By Logo Cloud */}
-      <TrustedBy />
 
       {/* 4. Recent Projects Section */}
       <RecentProjects />
