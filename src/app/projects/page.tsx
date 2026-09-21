@@ -7,7 +7,6 @@ import { PROJECTS_DATA, PERSONAL_INFO } from "@/data/portfolioData";
 import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/Footer";
 import BookingModal from "@/components/Modals/BookingModal";
-import DownloadZipBar from "@/components/DownloadZipBar/DownloadZipBar";
 import { ArrowLeft, Search, Sparkles, ExternalLink } from "lucide-react";
 import styles from "./projects.module.scss";
 
@@ -173,8 +172,6 @@ export default function AllProjectsPage() {
         </div>
       </main>
 
-      {/* Floating ZIP Download Action */}
-      <DownloadZipBar />
 
       {/* Footer */}
       <Footer onOpenBooking={() => setIsBookingOpen(true)} />
