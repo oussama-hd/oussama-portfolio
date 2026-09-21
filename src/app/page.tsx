@@ -9,7 +9,6 @@ import Services from "@/components/Services/Services";
 import StatsBar from "@/components/StatsBar/StatsBar";
 import Process from "@/components/Process/Process";
 import AboutMe from "@/components/AboutMe/AboutMe";
-import Faq from "@/components/Faq/Faq";
 import CtaBanner from "@/components/CtaBanner/CtaBanner";
 import Footer from "@/components/Footer/Footer";
 import BookingModal from "@/components/Modals/BookingModal";
@@ -51,8 +50,6 @@ export default function Home() {
       {/* 9. About Me & Employment History Section */}
       <AboutMe onOpenBooking={handleOpenBooking} />
 
-      {/* 10. Frequently Asked Questions */}
-      <Faq />
 
       {/* 11. Final Call-to-Action Banner */}
       <CtaBanner onOpenBooking={handleOpenBooking} />

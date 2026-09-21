@@ -32,11 +32,7 @@ export interface EducationItem {
   period: string;
 }
 
-export interface FaqItem {
-  id: string;
-  question: string;
-  answer: string;
-}
+
 
 export const PERSONAL_INFO = {
   name: "MOHAMMADI OUSSAMA",
@@ -409,35 +405,3 @@ export const SKILLS_CATEGORIES = [
   },
 ];
 
-export const FAQ_DATA: FaqItem[] = [
-  {
-    id: "faq-1",
-    question: "What is your primary tech stack and specialization?",
-    answer:
-      "I specialize in Senior Frontend and Full Stack Engineering. My core strengths are modern JavaScript/TypeScript (React, Next.js, Angular, Node.js) paired with robust backend services in Spring Boot and PostgreSQL, supported by comprehensive testing (90% coverage), NgRx/Redux state architecture, and AWS cloud deployments.",
-  },
-  {
-    id: "faq-2",
-    question: "What industry domains do you have extensive experience in?",
-    answer:
-      "I have substantial domain experience in Insurance SaaS (contract management, quote calculation, policy issuance, online claims for Alliance, CIAR, MacirVie), high-volume E-Commerce (multi-vendor platforms serving 30,000+ users with Stripe integrations), and FinTech/Admin enterprise workflows.",
-  },
-  {
-    id: "faq-3",
-    question: "How do you ensure software quality and maintainability?",
-    answer:
-      "I apply automated testing (achieving up to 90% unit test coverage using Jest, Jasmine, JUnit, Mockito, Cypress), modular SCSS and Storybook component documentation, strict TypeScript typing, clean Git review workflows, and automated CI/CD deployment pipelines.",
-  },
-  {
-    id: "faq-4",
-    question: "Are you available for remote, hybrid, or full-time opportunities?",
-    answer:
-      "Yes, I am open to senior frontend or full stack developer roles, technical consultations, and high-impact enterprise projects, collaborating remotely or on-site with teams globally.",
-  },
-  {
-    id: "faq-5",
-    question: "How can we discuss an opportunity or project?",
-    answer:
-      "You can reach out directly via email at oussama.mohammadi19@gmail.com, call +213 775 25 53 18, connect on GitHub/LinkedIn, or click 'Get In Touch' to submit your requirements.",
-  },
-];
