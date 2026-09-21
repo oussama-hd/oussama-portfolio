@@ -167,7 +167,7 @@ export default function AboutMe({ onOpenBooking }: AboutMeProps) {
             <div className={styles.experienceCard} id="experience">
               <div className={styles.expHeader}>
                 <h3 className={styles.expHeaderTitle}>Employment History</h3>
-                <span className={styles.expHeaderBadge}>6+ Years Experience</span>
+                <span className={styles.expHeaderBadge}>7+ Years Experience</span>
               </div>
 
               <div className={styles.expTable}>

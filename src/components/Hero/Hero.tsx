@@ -53,9 +53,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </div>
           </div>
 
-          {/* Floating badge 1: 6+ Years */}
+          {/* Floating badge 1: 7+ Years */}
           <div className={`${styles.badgeCard} ${styles.badgeTopCenter}`}>
-            <span className={styles.badgeValue}>6+ Years</span>
+            <span className={styles.badgeValue}>7+ Years</span>
             <span className={styles.badgeLabel}>Experience</span>
           </div>
 

@@ -35,23 +35,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           </ul>
         </nav>
 
-        <div className={styles.navActions}>
-          <a
-            href="/api/download-zip"
-            download="oussama-mohammadi-portfolio.zip"
-            className={styles.zipBtn}
-            title="Download full project code as ZIP"
-          >
-            <span>Code .ZIP</span>
-          </a>
-          <button
-            onClick={onOpenBooking}
-            className={styles.bookBtn}
-            type="button"
-          >
-            Get In Touch
-          </button>
-        </div>
+    
       </div>
     </header>
   );

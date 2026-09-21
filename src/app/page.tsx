@@ -14,7 +14,6 @@ import Faq from "@/components/Faq/Faq";
 import CtaBanner from "@/components/CtaBanner/CtaBanner";
 import Footer from "@/components/Footer/Footer";
 import BookingModal from "@/components/Modals/BookingModal";
-import DownloadZipBar from "@/components/DownloadZipBar/DownloadZipBar";
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -65,8 +64,6 @@ export default function Home() {
       {/* 12. Footer */}
       <Footer onOpenBooking={handleOpenBooking} />
 
-      {/* Floating ZIP Download Action */}
-      <DownloadZipBar />
 
       {/* Interactive Modals */}
       <BookingModal isOpen={isBookingOpen} onClose={handleCloseBooking} />

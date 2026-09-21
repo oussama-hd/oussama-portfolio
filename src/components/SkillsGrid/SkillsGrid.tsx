@@ -8,7 +8,7 @@ export default function SkillsGrid() {
         <div className={styles.header}>
           <h2 className={styles.title}>Skills & Technical Expertise</h2>
           <p className={styles.subtitle}>
-            Comprehensive technical repertoire developed through 6+ years of engineering enterprise systems.
+            Comprehensive technical repertoire developed through 7+ years of engineering enterprise systems.
           </p>
         </div>
 

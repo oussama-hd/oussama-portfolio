@@ -64,14 +64,14 @@ export const PERSONAL_INFO = {
 };
 
 export const HERO_STATS = [
-  { id: "1", value: "6+ Years", label: "Professional Experience", position: "top-center" },
+  { id: "1", value: "7+ Years", label: "Professional Experience", position: "top-center" },
   { id: "2", value: "30k+", label: "E-Commerce Users Served", position: "top-right" },
   { id: "3", value: "90%", label: "Unit Test Coverage", position: "bottom-left" },
   { id: "4", value: "100%", label: "Production Delivery Rate", position: "bottom-right" },
 ];
 
 export const BAR_STATS = [
-  { id: "years", value: "6+ Years", label: "Engineering Experience" },
+  { id: "years", value: "7+ Years", label: "Engineering Experience" },
   { id: "users", value: "30k+", label: "Active Platform Users" },
   { id: "coverage", value: "90%", label: "Test Coverage Achieved" },
   { id: "clients", value: "Enterprise", label: "Alliance, MacirVie & B-Link" },
