@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Mohammadi Oussama — Senior Frontend & Full Stack Developer",
   description:
-    "Senior Frontend/Full Stack Developer with more than 6 years of experience in creating and deploying reliable web apps. Specialized in React, Next.js, Angular, Spring Boot, and PostgreSQL.",
+    "Senior Frontend/Full Stack Developer with more than 7 years of experience in creating and deploying reliable web apps. Specialized in React, Next.js, Angular, Spring Boot, and PostgreSQL.",
   keywords: [
     "Mohammadi Oussama",
     "Senior Frontend Developer",

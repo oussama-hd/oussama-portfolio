@@ -48,7 +48,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/oussama-hd",
   linkedin: "https://linkedin.com",
   summary:
-    "Senior Frontend/Full Stack Developer with more than 6 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient solutions that ensure future maintainability and reliability.",
+    "Senior Frontend/Full Stack Developer with more than 7 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient solutions that ensure future maintainability and reliability.",
   availability: "Available for Senior / Lead Roles",
   education: {
     degree: "Master’s Degree (Professional) in Information & Communication Sciences and Technologies",

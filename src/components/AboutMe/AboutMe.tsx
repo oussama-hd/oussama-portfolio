@@ -32,7 +32,7 @@ export default function AboutMe({ onOpenBooking }: AboutMeProps) {
         <div className={styles.header}>
           <h2 className={styles.title}>About Me</h2>
           <p className={styles.subtitle}>
-            Senior Frontend/Full Stack Developer with more than 6 years of experience in creating and deploying reliable web apps.
+            Senior Frontend/Full Stack Developer with more than 7 years of experience in creating and deploying reliable web apps.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function AboutMe({ onOpenBooking }: AboutMeProps) {
             <div className={styles.bioCard}>
               <h3 className={styles.greetingTitle}>Hi! I&apos;m Mohammadi Oussama,</h3>
               <p className={styles.bioParagraph}>
-                a Senior Frontend/Full Stack Developer with more than 6 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient solutions that ensure future maintainability and reliability. Proven track record of collaborating with cross-functional teams to deliver successful projects.
+                a Senior Frontend/Full Stack Developer with more than 7 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient solutions that ensure future maintainability and reliability. Proven track record of collaborating with cross-functional teams to deliver successful projects.
               </p>
               <p className={styles.bioParagraph}>
                 My expertise spans enterprise insurance platforms (contract management, policy issuance, claim tracking for Alliance, CIAR, and MacirVie), high-volume e-commerce dashboards (serving 30,000+ users), and microservices architectures built on Spring Boot, PostgreSQL, and AWS.

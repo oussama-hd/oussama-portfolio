@@ -21,7 +21,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           </h1>
 
           <p className={styles.description}>
-            Senior Frontend/Full Stack Developer with more than 6 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient, scalable solutions.
+            Senior Frontend/Full Stack Developer with more than 7 years of experience in creating and deploying reliable web apps. Highly skilled in turning requirements into efficient, scalable solutions.
           </p>
 
           <div className={styles.buttonGroup}>
