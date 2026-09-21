@@ -1,0 +1,266 @@
+@use "@/styles/variables" as *;
+
+.projectsSection {
+  padding: 80px 0 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  @include section-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: 54px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: $bp-laptop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.projectCard {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.55);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7),
+                0 0 30px rgba(37, 99, 235, 0.2);
+
+    .imageContainer img {
+      transform: scale(1.03);
+    }
+
+    .projectTitle {
+      color: #60a5fa;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9.5;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #090e1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 18px;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+.overlayAction {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 9, 14, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  .projectCard:hover & {
+    opacity: 1;
+  }
+}
+
+.detailsBtn {
+  background: rgba(37, 99, 235, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 18px;
+  border-radius: $radius-full;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    transform: scale(1.05);
+  }
+}
+
+.viewWebsiteBtn {
+  background: rgba(37, 99, 235, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: $radius-full;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    background: #2563eb;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    transform: scale(1.08);
+  }
+}
+
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 10px;
+  border-radius: $radius-full;
+  letter-spacing: 0.02em;
+}
+
+.projectTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.projectDescription {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.techPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+}
+
+.pill {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+// "View All Projects" CTA Button Container below cards
+.viewAllContainer {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.viewAllBtn {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: $radius-full;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(37, 99, 235, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%);
+    border-color: rgba(56, 189, 248, 0.7);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(56, 189, 248, 0.35);
+    transform: translateY(-2px);
+    color: #38bdf8;
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+
+  svg {
+    transition: transform 0.25s ease;
+  }
+}

@@ -1,0 +1,82 @@
+@use "@/styles/variables" as *;
+
+.ctaSection {
+  padding: 60px 0 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  @include section-container;
+}
+
+.bannerCard {
+  position: relative;
+  border-radius: 26px;
+  padding: 64px 60px;
+  background: radial-gradient(circle at 85% 30%, rgba(37, 99, 235, 0.4) 0%, rgba(13, 21, 44, 0.95) 60%, rgba(7, 11, 22, 0.98) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8),
+              0 0 50px rgba(37, 99, 235, 0.2);
+  overflow: hidden;
+
+  @media (max-width: $bp-tablet) {
+    padding: 40px 24px;
+  }
+
+  // Geometric polygon glow background matching screenshot
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 60%;
+    background: linear-gradient(135deg, transparent 20%, rgba(59, 130, 246, 0.15) 60%, rgba(37, 99, 235, 0.3) 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    pointer-events: none;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headline {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.exceptionalText {
+  color: #3b82f6;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  display: inline;
+}
+
+.subheadline {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.ctaBtn {
+  @include glow-button;
+  padding: 14px 34px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

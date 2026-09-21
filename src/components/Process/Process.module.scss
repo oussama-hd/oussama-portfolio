@@ -1,0 +1,171 @@
+@use "@/styles/variables" as *;
+
+.processSection {
+  padding: 80px 0 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  @include section-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  max-width: 660px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+
+  @media (max-width: $bp-laptop) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.stepCard {
+  position: relative;
+  height: 340px;
+  background: #0a1122;
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 22px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.75);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.75), 0 0 25px rgba(37, 99, 235, 0.25);
+
+    .stepTitle {
+      color: #60a5fa;
+    }
+  }
+
+  @media (max-width: $bp-laptop) {
+    height: 310px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    height: 290px;
+    padding: 20px 18px;
+  }
+}
+
+// Giant number watermark filling the upper portion of the card
+.numberWatermark {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+
+  // Solid bright royal-blue matching the screenshot
+  color: #1e6bf0;
+  opacity: 0.95;
+
+  @media (max-width: $bp-laptop) {
+    font-size: 7.2rem;
+  }
+
+  @media (max-width: $bp-mobile) {
+    font-size: 6.5rem;
+    top: 8px;
+    left: 12px;
+  }
+}
+
+// Text content at the bottom
+.cardContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.stepDescription {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+// Inner CTA banner below the 3 cards
+.innerCtaBar {
+  width: 100%;
+  background: #091224;
+  border: 1px solid rgba(37, 99, 235, 0.35);
+  border-radius: 16px;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: $bp-tablet) {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 18px;
+  }
+}
+
+.innerCtaText {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f8fafc;
+  letter-spacing: -0.01em;
+}
+
+.innerCtaBtn {
+  @include glow-button;
+  padding: 10px 26px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}

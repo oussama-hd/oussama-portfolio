@@ -1,0 +1,425 @@
+@use "@/styles/variables" as *;
+
+.aboutSection {
+  padding: 80px 0 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  @include section-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  max-width: 680px;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 32px;
+  width: 100%;
+
+  @media (max-width: $bp-laptop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Left Card
+.profileCard {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.55);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.6),
+                0 0 25px rgba(37, 99, 235, 0.2);
+  }
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #091224;
+  margin-bottom: 20px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+  }
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: $radius-full;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #34d399;
+  margin-bottom: 16px;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+}
+
+.profileName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.profileRole {
+  font-size: 0.84rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.profileBio {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+.contactList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: left;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #38bdf8;
+  }
+
+  svg {
+    flex-shrink: 0;
+    color: #38bdf8;
+  }
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.socialIconBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.25);
+    border-color: rgba(59, 130, 246, 0.5);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+}
+
+.profileConnectBtn {
+  @include glow-button;
+  width: 100%;
+  padding: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+// Right Column with 2 stacked cards
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bioCard {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 22px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+}
+
+.greetingTitle {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.bioParagraph {
+  font-size: 0.94rem;
+  color: #94a3b8;
+  line-height: 1.65;
+}
+
+.techStackSection {
+  margin-top: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.techStackTitle {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skillsPillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillPill {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 5px 12px;
+  border-radius: $radius-full;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(56, 189, 248, 0.18);
+    border-color: rgba(56, 189, 248, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+// Experience Card
+.experienceCard {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 22px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+  }
+}
+
+.expHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.expHeaderTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.expHeaderBadge {
+  font-size: 0.72rem;
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 3px 10px;
+  border-radius: $radius-full;
+  font-weight: 600;
+}
+
+.expTable {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expRow {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 4px;
+  }
+}
+
+.expRowTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.expRole {
+  color: #f1f5f9;
+  font-weight: 700;
+  font-size: 0.98rem;
+  transition: color 0.2s ease;
+}
+
+.expPeriod {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.expCompanyRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.expDescription {
+  font-size: 0.84rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.expTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.expTag {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+// Education & Languages Box
+.educationSection {
+  margin-top: 16px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.educationTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.educationText {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.45;
+}
